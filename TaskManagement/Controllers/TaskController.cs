@@ -23,6 +23,38 @@ namespace TaskManagement.Controllers
             return await _taskService.GetAll(task);
         }
 
+        [HttpGet("GetTodaysTask")]
+        public async Task<ApiResponse> GetTodaysTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.GetTodaysTask(task);
+        }
+        [HttpGet("LastSevendaysTask")]
+        public async Task<ApiResponse> LastSevendaysTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.LastSevendaysTask(task);
+        }
+        [HttpGet("LastSevendaysActiveTask")]
+        public async Task<ApiResponse> LastSevendaysActiveTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.LastSevendaysActiveTask(task);
+        }
+        [HttpGet("CompletedTask")]
+        public async Task<ApiResponse> CompletedTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.CompletedTask(task);
+        }
+
+        [HttpGet("PendingTask")]
+        public async Task<ApiResponse> PendingTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.PendingTask(task);
+        }
+        [HttpGet("ProcessingTask")]
+        public async Task<ApiResponse> ProcessingTask([FromQuery] TaskFilterDTO task)
+        {
+            return await _taskService.PendingTask(task);
+        }
+
         [HttpPost("Add")]
         public async Task<ApiResponse> Add(TaskDTO product)
         {

@@ -15,5 +15,11 @@ namespace Common.IServices
         Task<ApiResponse> GetById(int id);
         Task<ApiResponse> Search(string searchText);
         Task<ApiResponse> Delete(int Id);
+        Task<ApiResponse> GetTodaysTask(TaskFilterDTO taskFilterDTO);
+        Task<ApiResponse> LastSevendaysTask(TaskFilterDTO taskFilterDTO);
+        Task<ApiResponse> LastSevendaysActiveTask(TaskFilterDTO taskFilterDTO);
+        Task<ApiResponse> CompletedTask(TaskFilterDTO taskFilterDTO);
+        Task<ApiResponse> PendingTask(TaskFilterDTO taskFilterDTO);
+        Task<ApiResponse> ProcessingTask(TaskFilterDTO taskFilterDTO);
     }
 }

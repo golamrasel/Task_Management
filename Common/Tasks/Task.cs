@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.Models.TaskInfo
+namespace Common.Tasks
 {
-    public enum TaskEnum
+    public enum TaskType
     {
         Improvement = 1,
         Bug = 2,
